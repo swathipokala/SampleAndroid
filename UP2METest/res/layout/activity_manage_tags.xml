@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#2A2A2A"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <!-- 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="1dp"
+        android:background="@drawable/settings_topimg"
+        android:paddingLeft="2dp" >
+
+        <ImageView
+            android:id="@+id/settingsHome"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:onClick="showHome"
+            android:padding="2dp"
+            android:src="@drawable/home_page_link" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="2dp" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/manageTagsHeading"
+            android:text="TAGS"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:paddingLeft="10dp" />
+		  </LinearLayout>
+    </RelativeLayout>
+ 	-->
+    
+    <RelativeLayout
+        android:id="@+id/settings_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2A2A2A" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@layout/managetagssharplayout"
+            android:orientation="vertical" >
+
+            
+            
+            <RelativeLayout
+	        android:id="@+id/settings_form"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff"
+	        android:layout_marginTop="80dp"
+	        android:layout_marginLeft="20dp" >
+		        <Button
+		            android:id="@+id/textView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/back"
+		            android:textSize="17sp"
+		            android:textColor="#ABACB6"
+		            android:onClick="showSettingsPage"
+		            android:background="@color/white" />
+		    </RelativeLayout>
+            
+            
+            
+            <ScrollView 
+               android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                 >
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp" >
+
+                <TextView
+                    android:id="@+id/tag1ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#EE1F25" />
+
+                <EditText
+                    android:id="@+id/tag1"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#EE1F25" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag1"
+                    android:tag="1" 
+                    android:onClick="deleteTag"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tag2ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#C268A9" />
+
+                <EditText
+                    android:id="@+id/tag2"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#C268A9" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag2"
+                    android:tag="2"
+                    android:onClick="deleteTag" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tag3ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#466DB4" />
+
+                <EditText
+                    android:id="@+id/tag3"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#466DB4" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag3"
+                    android:tag="3"
+                    android:onClick="deleteTag" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tag4ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#BBBBBB" />
+
+                <EditText
+                    android:id="@+id/tag4"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#BBBBBB" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag4" 
+                    android:tag="4"
+                    android:onClick="deleteTag"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tag5ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#F3EC0C" />
+
+                <EditText
+                    android:id="@+id/tag5"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#F3EC0C" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag5" 
+                    android:tag="5"
+                    android:onClick="deleteTag"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tag6ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#4AB747" />
+
+                <EditText
+                    android:id="@+id/tag6"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#4AB747" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag6" 
+                    android:tag="6"
+                    android:onClick="deleteTag"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tag7ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#F58021" />
+
+                <EditText
+                    android:id="@+id/tag7"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#F58021" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag7" 
+                    android:tag="7"
+                    android:onClick="deleteTag"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tag8ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#672A86" />
+
+                <EditText
+                    android:id="@+id/tag8"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#672A86" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag8" 
+                    android:tag="8"
+                    android:onClick="deleteTag"/>
+            </LinearLayout>
+             
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tag9ColorBox"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#FFFFFF" />
+
+                <EditText
+                    android:id="@+id/tag9"
+                    android:layout_width="350dp"
+                    android:layout_height="34dp"
+                    android:background="@layout/round_corner_edittext"
+                    android:hint="empty tag name"
+                    android:tag="#FFFFFF" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/delete_icon"
+                    android:id="@+id/deleteTag9" 
+                    android:tag="8"
+                    android:onClick="deleteTag"/>
+            </LinearLayout>
+            
+			</LinearLayout>
+			</ScrollView>
+			
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="30dp"
+                android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/saveButtonId"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/settingsbutton"
+                android:text="Save"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:onClick="saveTags" />
+
+            </RelativeLayout>
+            
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@drawable/salogosignup"
+            android:scaleType="fitStart"
+            android:src="@drawable/up2melogo" />
+
+    </RelativeLayout>
+
+</ScrollView>

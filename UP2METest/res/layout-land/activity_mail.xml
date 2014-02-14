@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@drawable/pagemail_topimg1"
+        android:padding="7dp" >
+
+        <Button
+            android:id="@+id/mailIcon"
+            style="@style/darkgraycolor"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:onClick="showDashHome"
+            android:text="@string/heading_home"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+            
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/mailIcon"
+                style="@style/whitecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle4"
+                android:text="@string/heading_mail" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/serachIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="showHideSearchViewFromMail"
+            android:src="@drawable/pagemail_searchicon" />
+
+        <SearchView
+            android:id="@+id/searchviewText"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/serachIcon"
+            android:background="@android:color/white"
+            android:paddingRight="3dp"
+            android:scaleType="fitCenter"
+            android:visibility="invisible" >
+        </SearchView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/unReadMessages"
+                style="@style/whitecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle8"
+                android:paddingStart="20dp"
+                android:text="@string/unread" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="right|center_vertical">
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/sortText"
+                style="@style/whitecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/sortArrow"
+                android:clickable="true"
+                android:contentDescription="@string/fontstyle8"
+                android:onClick="onClick"
+                android:paddingStart="10dp"
+                android:text="@string/receivedDate" />
+
+            <ImageView
+                android:id="@+id/sortArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="center"
+                android:src="@drawable/back_arrow" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:choiceMode="singleChoice"
+        android:columnWidth="200dp"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:horizontalSpacing="3dp"
+        android:numColumns="auto_fit"
+        android:smoothScrollbar="true"
+        android:stackFromBottom="false"
+        android:stretchMode="columnWidth"
+        android:textFilterEnabled="false"
+        android:verticalSpacing="3dp" >
+    </GridView>
+
+</LinearLayout>

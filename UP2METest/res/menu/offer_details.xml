@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/expDateMenu"
+            android:checkable="true"
+            android:checked="true"
+            android:title="@string/offerExpireDate"/>
+        <item
+            android:id="@+id/byProviderMenu"
+            android:checkable="true"
+            android:title="@string/offerProvider"/>
+    </group>
+</menu>

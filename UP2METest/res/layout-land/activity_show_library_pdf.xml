@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ShowLibraryPDFActivity">
+
+        
+    
+    <RelativeLayout
+	    android:id="@+id/llayout1"
+		android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/black">
+
+        
+        <LinearLayout
+		    android:id="@+id/llayout2"
+			android:orientation="vertical"
+		    android:layout_width="match_parent"
+		    android:layout_height="470dp"
+		    android:background="@color/black">
+	        
+	        
+	        <WebView  android:layout_height="wrap_content"
+	           	android:layout_width="match_parent"
+	            android:id="@+id/uh_provider_directorytr_cover_web_view"
+	            android:visibility="gone" />
+	
+	   </LinearLayout>
+
+      </RelativeLayout>
+
+    <RelativeLayout
+	    android:id="@+id/llayout3"
+		android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#313431"
+	    android:layout_below="@+id/llayout1">
+        
+	    <Button
+	        android:id="@+id/doneButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#313431"
+	        android:onClick="doneView"
+	        android:text="Done"
+	        android:textColor="@color/white"
+	        android:textStyle="bold" />
+	 </RelativeLayout>
+    
+</RelativeLayout>

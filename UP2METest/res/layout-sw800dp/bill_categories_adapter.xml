@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/offer_color1"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/offer_color1"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/billCategories"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:clickable="true"
+            android:paddingLeft="20dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/billCategoriesChk"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/checkbox_un_ticked"
+            android:clickable="true"
+            android:scaleType="fitStart"
+            android:checked="true"
+            android:onClick="onCategoryClicked"
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/cashFlowLayoutSeparator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/light_shadow"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>    
+    

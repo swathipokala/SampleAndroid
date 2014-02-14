@@ -1,0 +1,261 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundlogin" >
+
+        <RelativeLayout
+            style="@style/LoginFormContainer"
+            android:layout_width="600dp"
+            android:layout_height="547dp"
+            android:layout_gravity="center"
+            android:background="@layout/sharplayout"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@drawable/salogo_signup"
+                        android:gravity="center"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/salogo_signup" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/backgroundpopup"
+                        android:orientation="vertical" >
+
+                        <com.rrdonnelly.up2me.components.RobotoTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/notice_welcome"
+                            style="@style/whitecolor"
+                            android:contentDescription="@string/fontstyle2" />
+
+                        <com.rrdonnelly.up2me.components.RobotoTextView
+                            android:layout_width="514dp"
+                            android:layout_height="150dp"
+                            android:gravity="left"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="@string/notice" 
+                            style="@style/whitecolor"
+                            android:contentDescription="@string/fontstyle3"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRowError"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left" >
+
+                    <TextView
+                        android:id="@+id/loginErroMsg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/red"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp" >
+
+                    <com.rrdonnelly.up2me.components.RobotoTextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/user_name"
+                         android:contentDescription="@string/fontstyle3"
+                        style="@style/blackcolor" 
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp" >
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="540dp"
+                        android:layout_height="match_parent"
+                        android:background="@layout/round_corner_edittext"
+                        android:inputType="textEmailAddress" 
+                        />
+
+                    <!-- android:background="@layout/edittext_rounded_corners" /> -->
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp" >
+
+                    <com.rrdonnelly.up2me.components.RobotoTextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/password"
+                         android:contentDescription="@string/fontstyle3"
+                        style="@style/blackcolor" 
+                         />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp" >
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="540dp"
+                        android:layout_height="match_parent"
+                        android:background="@layout/round_corner_edittext"
+                        android:inputType="textPassword" 
+                        />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@+id/tableLayout1"
+                android:layout_below="@+id/tableLayout1"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <ImageButton
+                    android:id="@+id/signIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@color/white"
+                    android:contentDescription="@drawable/signinbtn"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/signinbtn" />
+
+                <ImageButton
+                    android:id="@+id/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:contentDescription="@drawable/clearbtn"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="2dp"
+                    android:src="@drawable/clearbtn" />
+
+                <ImageButton
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@color/white"
+                    android:contentDescription="@drawable/registerbtn"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/registerbtn" />
+
+                <TextView
+                    android:id="@+id/sync"
+                    android:layout_width="243dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end|center_vertical|center_horizontal"
+                    android:paddingLeft="190dp"
+                    android:text="@string/sync"
+                    android:textColor="@color/orange"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/syncpadding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:paddingLeft="10dp" />
+
+                <ToggleButton
+                    android:id="@+id/toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:button="@layout/check"
+                    android:checked="true"
+                    android:gravity="right"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</merge>

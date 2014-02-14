@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#565656"
+        android:id="@+id/unPaidRelLayout"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/statementImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/statementImage">
+            
+        <com.rrdonnelly.up2me.components.RobotoTextView
+            android:id="@+id/name"
+            style="@style/whitecolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/statementImage"
+            android:contentDescription="@string/fontstyle2"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:maxLines="1"
+            android:textIsSelectable="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal" >
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/billDescription"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle4"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Amount $" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/billAmount"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle4"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/defaultdecimal" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#343434"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/redLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/redline"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#343434"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="2dp"
+            android:background="#343434"
+            android:orientation="horizontal" >
+
+            <ToggleButton
+                android:id="@+id/chkButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/checkbox_un_ticked"
+                android:textOff=""
+                android:textOn="" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/txtPaidMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@id/chkButton"
+                android:textIsSelectable="false"
+                style="@style/whitecolor" 
+                android:contentDescription="@string/fontstyle3"/>
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

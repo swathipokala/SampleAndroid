@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rrdonnelly.up2me"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.rrdonnelly.up2me.util.ControlApplication"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.rrdonnelly.up2me.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.DashBoardActivity"
+            android:label="@string/title_activity_dash_board" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.BillDetailsActivity"
+            android:label="@string/title_activity_bill_details" >
+            <meta-data
+                android:name="com.google.android.apps.drive.APP_ID"
+                android:value="id=865417890542" />
+
+            <intent-filter>
+                <action android:name="com.google.android.apps.drive.DRIVE_OPEN" />
+
+                <data android:mimeType="application/vnd.google-apps.drive-sdk.865417890542" />
+                <data android:mimeType="application/pdf" />
+                <data android:mimeType="image/png" />
+                <data android:mimeType="image/jpeg" />
+                <data android:mimeType="image/jpg" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.UserRegistrationActivity"
+            android:label="@string/title_activity_user_registration" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.OfferDetailsActivity"
+            android:label="@string/title_activity_offer_details" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.SyncProcessActivity"
+            android:label="@string/title_activity_sync_process" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.AccountStatements"
+            android:label="@string/title_activity_account_statements" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.BillsStatement"
+            android:label="@string/title_activity_bills_statement" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.MyPlanActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:label="@string/title_activity_my_plan" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.CashFlowActivity"
+            android:label="Cash Flow Activity" />
+        <activity
+            android:name="com.rrdonnelly.up2me.UnpaidActivity"
+            android:label="Unpaid" />
+        <activity
+            android:name="com.rrdonnelly.up2me.OfferListActivity"
+            android:label="Offer List" />
+        <activity
+            android:name="com.rrdonnelly.up2me.MailActivity"
+            android:label="Mail Activity" />
+        <activity
+            android:name="com.rrdonnelly.up2me.AssistantsActivity"
+            android:label="@string/title_activity_assistants" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.LibraryActivity"
+            android:label="@string/title_activity_library" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.ShowLibraryPDFActivity"
+            android:label="@string/title_activity_show_library_pdf" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.ManageTagsActivity"
+            android:label="@string/title_activity_manage_tags" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.ManageOfferProvidersActivity"
+            android:label="@string/title_activity_manage_offer_providers" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.UserProfileActivity"
+            android:label="@string/title_activity_user_profile" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.SelectCloudProviderActivity"
+            android:label="@string/title_activity_select_cloud_provider" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.ManageDocumentProvidersActivity"
+            android:label="@string/title_activity_manage_document_providers" >
+        </activity>
+        <activity
+            android:name="com.rrdonnelly.up2me.UserTermsConditionsActivity"
+            android:label="@string/title_activity_user_terms_conditions" >
+        </activity>
+        <activity android:name="com.dropbox.sync.android.DbxAuthActivity" />
+        <activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <data android:scheme="db-17xvui7szluvwi1" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="4030500" />
+
+        <service
+            android:name="com.dropbox.sync.android.DbxSyncService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="Dropbox Sync" />
+
+        <receiver
+            android:name="com.rrdonnelly.up2me.services.AlarmService"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.rrdonnelly.up2me.BillPayActivity"
+            android:label="@string/title_activity_bill_pay" >
+        </activity>
+        
+         <activity
+            android:name="com.artifex.mupdfdemo.MuPDFActivity"
+            android:label="@string/title_activity_user_terms_conditions" >
+        </activity>
+    </application>
+
+</manifest>

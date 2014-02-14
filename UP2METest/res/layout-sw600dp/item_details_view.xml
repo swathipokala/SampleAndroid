@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="150dp"
+     android:orientation="horizontal">
+<RelativeLayout 
+    android:id="@+id/rlItemList"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:orientation="horizontal"
+     android:padding="10dp"  
+     android:background="#343434">
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        />
+    <LinearLayout
+     android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_toRightOf="@id/photo"
+    android:paddingLeft="10dp">
+    <TextView android:id="@+id/name"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#c6c6c6"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:ellipsize="end"
+        android:maxLines="1"
+        />
+    <TextView android:id="@+id/description"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#8c8c8c"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:ellipsize="end"
+        android:maxLines="2"
+        />
+    </LinearLayout>
+</RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/LayoutSeparator1"
+    android:layout_width="fill_parent"
+    android:layout_height="3dp"
+    android:layout_alignLeft="@+id/rlItemList"
+    android:layout_alignParentBottom="true"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:paddingTop="10dp" >
+</LinearLayout>
+
+</RelativeLayout>

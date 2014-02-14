@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/pageoffer_topimg1"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/home_page_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@drawable/home_page_link"
+                android:onClick="showBillsHome"
+                android:src="@drawable/home_page_link" />
+
+            <Button
+                android:id="@+id/statmentsBackbtn"
+                style="@style/darkgraycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:onClick="showBillsHome"
+                android:text=""
+                android:textSize="15sp" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/statementslbl"
+                style="@style/whitecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/fontstyle4"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textAllCaps="true" />
+
+            <ImageButton
+                android:id="@+id/pageoffer_next_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@drawable/pageoffer_next_link"
+                android:onClick="nextBtnClicked"
+                android:src="@drawable/pageoffer_next_link" />
+
+            <ImageButton
+                android:id="@+id/pageoffer_back_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/pageoffer_next_link"
+                android:background="@android:color/transparent"
+                android:contentDescription="@drawable/pageoffer_back_link"
+                android:onClick="backBtnClicked"
+                android:paddingRight="15dp"
+                android:src="@drawable/pageoffer_back_link" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/ashcolor"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/statmentsImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/statementName"
+                style="@style/whitecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/statementDescription"
+                android:layout_alignTop="@+id/statmentsImage"
+                android:contentDescription="@string/fontstyle9"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/statementDescription"
+                style="@style/lightgraycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statementName"
+                android:layout_toRightOf="@id/statmentsImage"
+                android:contentDescription="@string/fontstyle3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/statementDescriptionWithdate"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/statementDescription"
+                android:layout_alignBottom="@+id/statementDescription"
+                android:layout_toRightOf="@+id/statementDescription"
+                android:contentDescription="@string/fontstyle4"
+                android:text="" />
+             <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/statementDescriptionWithdate"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+                
+            <ImageView
+                android:id="@+id/pageoffer_subnav_icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/ashcolor"
+                android:contentDescription="@drawable/pageoffer_subnav_icon1"
+                android:onClick="showTagsMenu"
+                android:src="@drawable/pageoffer_subnav_icon1" />
+
+            <ToggleButton
+                android:id="@+id/pageoffer_subnav_icon2"
+                android:layout_width="45dp"
+                android:layout_height="42dp"
+                android:background="@drawable/pageoffer_subnav_icon2"
+                android:textOff=""
+                android:textOn=""
+                android:padding="5dp" />
+
+            <ImageButton
+                android:id="@+id/pageoffer_subnav_icon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/ashcolor"
+                android:contentDescription="@drawable/pageoffer_subnav_icon4"
+                android:onClick="showActionPopup"
+                android:src="@drawable/pageoffer_subnav_icon4" />
+                <ImageButton
+                   android:id="@+id/payBy"
+                   android:layout_width="wrap_content"
+                   android:layout_height="42dp"
+                   android:background="@color/ashcolor"
+                   android:contentDescription="@drawable/pageoffer_subnav_icon4"
+                   android:scaleType="fitXY"
+                   android:onClick="payBy"
+                   android:src="@drawable/paybyimg" />
+            </LinearLayout>
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/llayoutpanelShowHide"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:paddingTop="3dp" >
+
+           <!-- <com.joanzapata.pdfview.PDFView
+                android:id="@+id/pdfview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:visibility="gone"/> -->
+           
+ 			<ImageView 
+                android:id="@+id/pdfPreviewImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+ 
+ 			<TextView 
+			    android:id="@+id/statementdeleteInformation"
+	                android:layout_width="730dp"
+	                android:layout_height="fill_parent"
+	                android:layout_alignParentRight="true"
+                	android:layout_marginRight="10dp"
+	                android:text="@string/statementdelete"
+	                android:textColor="@color/white"
+	                android:gravity="center"
+	                android:visibility="gone"/>
+ 			
+            <ImageView
+                android:id="@+id/panelHideShowBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="sideMenuShowHide"
+                android:paddingLeft="0dp"
+                android:src="@drawable/panel_hide_show" />
+
+            <ScrollView
+                android:id="@+id/sidebarScrollView"
+                android:layout_width="280dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left"
+                android:background="@color/black"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/sideBarLayout"
+                    android:layout_width="280dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:background="@color/black" >
+
+                    <LinearLayout
+                        android:id="@+id/Layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="#343434"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" >
+
+                        <LinearLayout
+                            android:id="@+id/tableLayout1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="25dp"
+                            android:background="#343434"
+                            android:orientation="horizontal" >
+
+                            <com.rrdonnelly.up2me.components.RobotoTextView
+                                android:id="@+id/statmentText1_Left"
+                                style="@style/graycolor"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/fontstyle8"
+                                android:ellipsize="end"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:text="" />
+
+                            <com.rrdonnelly.up2me.components.RobotoTextView
+                                android:id="@+id/statmentText1_right"
+                                style="@style/graycolor"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/fontstyle8"
+                                android:gravity="right"
+                                android:text="" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Layout2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="25dp"
+                            android:background="#343434"
+                            android:orientation="horizontal" >
+
+                            <com.rrdonnelly.up2me.components.RobotoTextView
+                                android:id="@+id/statmentText2_Left"
+                                style="@style/graycolor"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/fontstyle8"
+                                android:ellipsize="end"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:width="100dp" />
+
+                            <com.rrdonnelly.up2me.components.RobotoTextView
+                                android:id="@+id/statmentText2_right"
+                                style="@style/graycolor"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/fontstyle8"
+                                android:gravity="right"
+                                android:text=""
+                                android:width="100dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Layout3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="25dp"
+                            android:background="#343434"
+                            android:orientation="horizontal" >
+
+                            <com.rrdonnelly.up2me.components.RobotoTextView
+                                android:id="@+id/statmentText3_Left"
+                                style="@style/whitecolor"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/fontstyle8"
+                                android:ellipsize="end"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:text=""
+                                android:width="100dp" />
+
+                            <com.rrdonnelly.up2me.components.RobotoTextView
+                                android:id="@+id/statmentText3_right"
+                                style="@style/whitecolor"
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/fontstyle8"
+                                android:gravity="right"
+                                android:text=""
+                                android:width="100dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Layout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_alignLeft="@+id/Layout1"
+                        android:layout_below="@+id/Layout1"
+                        android:background="@color/black"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Layout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_alignLeft="@+id/Layout1"
+                        android:layout_below="@+id/Layout3"
+                        android:background="#343434"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Layout5"
+                        android:layout_width="270dp"
+                        android:layout_height="150dp"
+                        android:layout_alignLeft="@+id/Layout1"
+                        android:layout_below="@+id/Layout4"
+                        android:background="@color/black"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/messageImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:gravity="center|fill"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:scaleType="fitXY"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/videoImageThumb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:gravity="center|fill"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:scaleType="fitXY"
+                            android:visibility="gone" />
+
+                        <VideoView
+                            android:id="@+id/messageVideoView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:gravity="center|fill"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:scaleType="fitXY"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Layout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_alignLeft="@+id/Layout1"
+                        android:layout_below="@+id/Layout5"
+                        android:background="@color/black"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Layout7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignLeft="@+id/Layout1"
+                        android:layout_below="@+id/Layout6"
+                        android:layout_gravity="top"
+                        android:background="@color/black"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/documentHistoryText"
+                            android:layout_width="230dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="left"
+                            android:background="#343434"
+                            android:gravity="left|center"
+                            android:paddingLeft="5dp"
+                            android:text="@string/documenthistory"
+                            android:textAllCaps="true"
+                            android:textColor="@color/billspagefont"
+                            android:textSize="15sp" />
+
+                        <ToggleButton
+                            android:id="@+id/documentHistoryTogBtn"
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="left"
+                            android:background="#343434"
+                            android:button="@layout/all_offers_toggle"
+                            android:onClick="showHideDocHistory"
+                            android:scaleType="fitStart"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LayoutDocHistory17"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignLeft="@+id/Layout1"
+                        android:layout_below="@+id/Layout7"
+                        android:layout_gravity="top"
+                        android:background="@color/black"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <com.rrdonnelly.up2me.components.RobotoTextView
+                            android:id="@+id/documentHistoryResultText"
+                            style="@style/whitecolor"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#343434"
+                            android:contentDescription="@string/fontstyle8"
+                            android:gravity="left|center"
+                            android:paddingLeft="5dp"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Layout8"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_alignLeft="@+id/Layout1"
+                        android:layout_below="@+id/LayoutDocHistory17"
+                        android:background="@color/black"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Layout9"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignLeft="@+id/Layout1"
+                        android:layout_below="@+id/Layout8"
+                        android:background="#343434"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/addYourAcccountToPlus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:text="@string/addyouraccounttoassistants"
+                            android:textColor="@color/billspagefont"
+                            android:textSize="17sp" />
+                        
+                        <LinearLayout
+                            android:id="@+id/billLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp" >
+
+                            <ImageView
+                                android:id="@+id/billButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:adjustViewBounds="false"
+                                android:background="#343434"
+                                android:padding="5dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/app_img3" />
+
+                            <TextView
+                                android:id="@+id/bills"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bills"
+                                android:textColor="@color/billspagefont"
+                                android:textSize="17sp" />
+
+                            <ToggleButton
+                                android:id="@+id/billsCheckBox"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/checkbox_un_ticked"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="fitStart"
+                                android:textOff=""
+                                android:textOn="" 
+                                android:onClick="onToggleClicked"/>
+                        </LinearLayout>
+                        
+                         <!-- <LinearLayout
+                            android:id="@+id/cashFlowLayoutSeparator1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#6D6D6D"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/cashFlowlayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp" >
+
+                            <ImageView
+                                android:id="@+id/cashFlowButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:adjustViewBounds="false"
+                                android:background="#343434"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/app_img5" />
+
+                            <TextView
+                                android:id="@+id/cashFlowTxt"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/cashflow"
+                                android:textColor="@color/billspagefont"
+                                android:textSize="17sp" />
+
+                            <ToggleButton
+                                android:id="@+id/cashflowCheckBox"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/checkbox_un_ticked"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="fitStart"
+                                android:textOff=""
+                                android:textOn="" 
+                                android:onClick="onToggleClicked"/>
+                        </LinearLayout> -->
+                        <LinearLayout
+                            android:id="@+id/StatementsLayoutSeparator1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#6D6D6D"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/statementlayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp" >
+
+                            <ImageView
+                                android:id="@+id/statementButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:adjustViewBounds="false"
+                                android:background="#343434"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/app_img8" />
+
+                            <TextView
+                                android:id="@+id/statementTxt"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/statements"
+                                android:textColor="@color/billspagefont"
+                                android:textSize="17sp" />
+
+                            <ToggleButton
+                                android:id="@+id/statementCheckBox"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/checkbox_un_ticked"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="fitStart"
+                                android:textOff=""
+                                android:textOn="" 
+                                android:onClick="onToggleClicked"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutSeparator2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#6D6D6D"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutSub3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp" >
+
+                            <ImageView
+                                android:id="@+id/alertsButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:adjustViewBounds="false"
+                                android:background="#343434"
+                                android:padding="5dp"
+                                android:paddingLeft="10dp"
+                                android:scaleType="fitStart"
+                                android:src="@drawable/app_img6" />
+
+                            <TextView
+                                android:id="@+id/alerts"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/alerts"
+                                android:textColor="@color/billspagefont"
+                                android:textSize="17sp" />
+
+                            <ToggleButton
+                                android:id="@+id/alertsCheckbox"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/checkbox_un_ticked"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="fitStart"
+                                android:textOff=""
+                                android:textOn="" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutSeparator3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#6D6D6D"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutSub4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp" >
+
+                            <ImageView
+                                android:id="@+id/savingButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:adjustViewBounds="false"
+                                android:background="#343434"
+                                android:padding="5dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/app_img7" />
+
+                            <TextView
+                                android:id="@+id/savings"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/savings"
+                                android:textColor="@color/billspagefont"
+                                android:textSize="17sp" />
+
+                            <ToggleButton
+                                android:id="@+id/savingsCheckBox"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/checkbox_un_ticked"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="fitStart"
+                                android:textOff=""
+                                android:textOn="" />
+                        </LinearLayout>
+
+                         <!-- <LinearLayout
+                            android:id="@+id/unPaidLayoutSep"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#6D6D6D"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/unpaidLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp" >
+
+                            <ImageView
+                                android:id="@+id/unpaidButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:adjustViewBounds="false"
+                                android:background="#343434"
+                                android:padding="5dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/app_img2" />
+
+                            <TextView
+                                android:id="@+id/unpaid"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/unpaid"
+                                android:textColor="@color/billspagefont"
+                                android:textSize="17sp" />
+
+                            <ToggleButton
+                                android:id="@+id/unpaidCheckBox"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/checkbox_un_ticked"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="fitStart"
+                                android:textOff=""
+                                android:textOn="" 
+                                android:onClick="onToggleClicked"/>
+                        </LinearLayout> -->
+                        
+                        <LinearLayout
+                            android:id="@+id/LayoutSeparator5"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#6D6D6D"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutSub6"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp" >
+
+                            <ImageView
+                                android:id="@+id/expensesButton"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:adjustViewBounds="false"
+                                android:background="#343434"
+                                android:padding="5dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/app_img4" />
+
+                            <TextView
+                                android:id="@+id/expenses"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/expenses"
+                                android:textColor="@color/billspagefont"
+                                android:textSize="17sp" />
+
+                            <ToggleButton
+                                android:id="@+id/expensesCheckBox"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/checkbox_un_ticked"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:scaleType="fitStart"
+                                android:textOff=""
+                                android:textOn="" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/LayoutSeparator6"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#6D6D6D"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/taptoViewBtn"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:textColor="@color/white"
+                android:background="@color/billsAshColor"
+                android:text="@string/tap_to_view"
+                android:onClick="showStatementPDF"
+                android:visibility="gone"/>
+
+             <Button
+                 android:id="@+id/revertBtnToDownloadpdf"
+                 android:layout_width="130dp"
+                 android:layout_height="40dp"
+                 android:layout_alignParentBottom="true"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginBottom="300dp"
+                 android:background="@color/billsAshColor"
+                 android:text="@string/revertbtn"
+                 android:textColor="@color/white"
+                 android:visibility="gone" 
+                 android:onClick="downloadStatementPDF"/>
+             
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

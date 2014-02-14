@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDFBF"
+    tools:context=".MyPlanActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/pagemail_topimg1"
+        android:padding="7dp">
+
+	        <Button
+		            android:id="@+id/homeorBackbtn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerInParent="true"
+		            android:background="@android:color/transparent"
+		            android:text=""
+		            android:layout_marginLeft="10dp"
+		            style="@style/darkgraycolor"
+		            android:onClick="showDashboardHome" 
+		            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <!-- <ImageView
+                android:id="@+id/mailIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:src="@drawable/pagebill_topicon" />  -->
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/up2me_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text=""
+                style="@style/whitecolor"
+                android:contentDescription="@string/fontstyle4"
+                android:textAllCaps="true"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/pageoffer_back_link"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+             android:visibility="gone"
+            android:src="@drawable/home_menu_btn" />
+    </RelativeLayout>
+
+
+ <ScrollView android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" 
+            android:id="@+id/scrollTxtDescription"
+     android:layout_margin="5dp">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:layout_margin="5dp"
+                android:id="@+id/layoutTxtDescription">
+    <!--  
+    <WebView  android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/myPlanData" />
+                
+    -->
+    
+    <FrameLayout
+                android:id="@+id/webViewPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+    
+    
+    </LinearLayout>
+    </ScrollView>
+     <!--  <WebView  android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/myPlanData" /> -->
+ 
+
+</LinearLayout>

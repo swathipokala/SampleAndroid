@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="1dp"
+        android:padding="7dp"
+        android:background="@drawable/pagelibrary_topimg1">
+        <ImageView
+            android:id="@+id/mailIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/home_page_link"
+            android:onClick="showHome" 
+            android:layout_marginLeft="10dp"/>
+        <LinearLayout 
+            android:id="@+id/linearLayout1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" android:padding="2dp">
+            <ImageView
+                android:id="@+id/libraryIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:src="@drawable/pagelibrary_topicon" />
+        <!-- 
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/up2me_txt"
+            android:text="BILLS"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:paddingLeft="10dp" />  -->
+            
+        </LinearLayout>
+        <ImageView
+           android:id="@+id/serachIcon"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:layout_centerInParent="true"
+           android:layout_alignParentRight="true"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:src="@drawable/pagemail_searchicon" 
+           android:onClick="showHideSearchView"/>
+
+		<SearchView
+            android:id="@+id/searchviewText"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/serachIcon"
+            android:background="@android:color/white"
+            android:paddingRight="3dp"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            >
+        
+        </SearchView> 
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/unReadMessages"
+        android:text="Unread"
+        android:textColor="#ffffff"
+        android:paddingStart="20dp" 
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>
+    <!-- 
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="300dp"
+        android:gravity="center"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="3dp"
+        android:drawSelectorOnTop="true"
+        android:stretchMode="columnWidth"
+        android:choiceMode="singleChoice"
+        android:textFilterEnabled="false"
+        android:stackFromBottom="false"
+        android:smoothScrollbar="true"
+        android:numColumns="auto_fit">
+    </GridView>  -->
+    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp" >
+
+			                        <ScrollView
+									        android:id="@+id/dashboardlibrary"
+									        android:layout_width="match_parent"
+									        android:layout_height="match_parent"
+									        android:background="@color/black"
+			                                android:layout_marginTop="5dp">
+						                            <LinearLayout
+						                            android:layout_width="match_parent"
+						                            android:layout_height="match_parent"
+						                            android:layout_gravity="top"
+						                            android:orientation="vertical"
+						                            android:paddingTop="5dp" >
+						
+								                            <LinearLayout
+								                                android:id="@+id/catalogsLL"
+								                                android:layout_width="fill_parent"
+								                                android:layout_height="wrap_content"
+								                                android:layout_gravity="top"
+								                                android:orientation="horizontal" >
+								
+								                                <Button
+								                                    android:id="@+id/catalogsflyerBtn"
+								                                    android:layout_width="0dp"
+								                                    android:layout_height="wrap_content"
+								                                    android:layout_gravity="left"
+								                                    android:layout_weight="1.13"
+								                                    android:background="@color/dashboardRefCOlor"
+								                                    android:clickable="true"
+								                                    android:gravity="center|left"
+								                                    android:paddingLeft="15dp"
+								                                    android:text="Catalogs/Flyers"
+								                                    android:textColor="#B1B1B1"
+								                                    android:textSize="18sp" />
+								
+								                                <Button
+								                                    android:id="@+id/catalogsflyerPlusBtn"
+								                                    android:layout_width="35dp"
+								                                    android:layout_height="fill_parent"
+								                                    android:layout_gravity="center|right"
+								                                    android:background="@color/dashboardRefCOlor"
+								                                    android:text="—"
+								                                    android:textColor="#B1B1B1"
+								                                    android:textSize="30sp" />
+								                            </LinearLayout>
+						
+							                                <HorizontalScrollView
+											                    android:layout_width="fill_parent"
+											                    android:layout_height="180dp"
+											                    android:background="#292929"
+											                    android:id="@+id/horizontalScrollViewFlyer"
+											                    android:visibility="visible">
+																
+								                                    <LinearLayout
+												                        android:orientation="horizontal"
+												                        android:layout_height="match_parent"
+												                        android:layout_width="match_parent"
+												                        android:id="@+id/BarFlyer" 
+												                        android:padding="5dp">
+										                                    
+												                   	</LinearLayout>
+							                				</HorizontalScrollView>
+						
+								                            <LinearLayout
+								                                android:id="@+id/referenceLL"
+								                                android:layout_width="fill_parent"
+								                                android:layout_height="wrap_content"
+								                                android:layout_gravity="bottom"
+								                                android:orientation="horizontal"
+								                                android:paddingTop="2dp" >
+								
+									                                <Button
+									                                    android:id="@+id/referenceBtn"
+									                                    android:layout_width="0dp"
+									                                    android:layout_height="wrap_content"
+									                                    android:layout_gravity="left"
+									                                    android:layout_weight="0.86"
+									                                    android:background="@color/dashboardRefCOlor"
+									                                    android:clickable="true"
+									                                    android:gravity="center|left"
+									                                    android:paddingLeft="15dp"
+									                                    android:text="Reference"
+									                                    android:textColor="#B1B1B1"
+									                                    android:textSize="18sp" />
+									
+									                                <Button
+									                                    android:id="@+id/referencePlusBtn"
+									                                    android:layout_width="35dp"
+									                                    android:layout_height="fill_parent"
+									                                    android:layout_gravity="center|right"
+									                                    android:background="@color/dashboardRefCOlor"
+									                                    android:text="+"
+									                                    android:textColor="#B1B1B1"
+									                                    android:textSize="30sp" />
+								                            </LinearLayout>
+						
+								                            <HorizontalScrollView
+												                    android:layout_width="match_parent"
+												                    android:layout_height="180dp"
+												                    android:background="#292929"
+												                    android:id="@+id/horizontalScrollViewReference"
+												                    android:visibility="gone"
+												                    >
+																	
+								                                    <LinearLayout
+												                        android:orientation="horizontal"
+												                        android:layout_height="match_parent"
+												                        android:layout_width="match_parent"
+												                        android:id="@+id/BarReference" 
+												                        android:padding="5dp">
+								                                   								                                    
+												                   </LinearLayout>
+								                			</HorizontalScrollView>
+						                        	</LinearLayout>
+										</ScrollView>
+                    </LinearLayout>    
+    
+
+</LinearLayout>

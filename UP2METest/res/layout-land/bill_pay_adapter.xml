@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/billPayMainLayout"
+      android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1C1C1D"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp" >
+
+        <ToggleButton
+            android:id="@+id/billsCheckBox"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/checkbox_un_ticked"
+            android:clickable="true"
+            android:padding="5dp"
+            android:scaleType="fitStart"
+            android:onClick="billIndividualSelect"
+            android:textOff=""
+            android:textOn="" />
+
+        <ImageView
+            android:id="@+id/billImage"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+             />
+
+        <LinearLayout
+            android:layout_width="475dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp" >
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/billName"
+                style="@style/whitecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/billDue"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paidLayout"
+            android:layout_width="80dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/paidBill"
+                android:textColor="@color/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="PAID" />
+
+            <TextView
+                android:id="@+id/unpaidBill"
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="UNPAID" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/minLayout"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/billMinimum"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Minimum" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/billBalance"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="5dp"
+                android:text="Balance" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp" >
+ 			
+            <TextView
+                android:id="@+id/billMinimumValue"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/billBalanceValue"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="5dp"
+                android:text="" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/billTotalValue"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:gravity="right|center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@layout/round_corner_edittext"
+            android:inputType="number"
+            android:textSize="15sp" />
+    </LinearLayout>

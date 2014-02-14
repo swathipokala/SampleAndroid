@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#2A2A2A"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <!-- 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="1dp"
+        android:background="@drawable/settings_topimg"
+        android:paddingLeft="2dp" >
+
+        <ImageView
+            android:id="@+id/settingsHome"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:onClick="showHome"
+            android:padding="2dp"
+            android:src="@drawable/home_page_link" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="2dp" >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/manageTagsHeading"
+            android:text="TAGS"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:paddingLeft="10dp" />
+		  </LinearLayout>
+    </RelativeLayout>
+ 	-->
+    
+    <RelativeLayout
+        android:id="@+id/settings_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2A2A2A" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@layout/managetagssharplayout"
+            android:orientation="vertical" >
+
+            
+            
+            <RelativeLayout
+	        android:id="@+id/settings_form"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff"
+	        android:layout_marginTop="80dp"
+	        android:layout_marginLeft="20dp" >
+		        <Button
+		            android:id="@+id/textView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/back"
+		            android:textSize="17sp"
+		            android:textColor="#ABACB6"
+		            android:onClick="showSettingsPage"
+		            android:background="@color/white" />
+		    </RelativeLayout>
+            
+            
+            
+             <ScrollView 
+               android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                >
+            <LinearLayout
+                android:id="@+id/tagslayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                 >
+            
+           
+
+           
+            </LinearLayout>
+            
+			</ScrollView>
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="30dp"
+                android:paddingTop="400dp">
+
+            <Button
+                android:id="@+id/saveButtonId"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/settingsbutton"
+                android:onClick="saveTags" />
+
+            </RelativeLayout>
+            
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@drawable/salogosignup"
+            android:scaleType="fitStart"
+            android:src="@drawable/up2melogo" />
+
+    </RelativeLayout>
+
+</LinearLayout>

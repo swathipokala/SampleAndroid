@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cashPayLayout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ToggleButton
+            android:id="@+id/CashFlowToggleButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/checkbox_un_ticked"
+            android:clickable="true"
+            android:padding="5dp"
+            android:scaleType="fitStart"
+            android:textOff=""
+            android:textOn="" />
+
+        <ImageView
+            android:id="@+id/CashFlowImage"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/pageoffer_subnav_icon1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/cashFlowName"
+                style="@style/whitecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Capital Card" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/CashFlowDueDate"
+                style="@style/graycolor"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Due 09/15/2013 . credit card" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            >
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle2"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:text="$" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:id="@+id/CashFlowAmount"
+                style="@style/graycolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/fontstyle2"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+ <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/receivedDateMenu"
+            android:checkable="true"
+            android:checked="true"
+            android:title="@string/receivedDate"/>
+        <item
+            android:id="@+id/dueDateMenu"
+            android:checkable="true"
+            android:title="@string/dueDate"/>
+        <item
+            android:id="@+id/documentType"
+            android:checkable="true"
+            android:title="@string/document_type"/>
+        <item
+            android:id="@+id/byProviderMenu"
+            android:checkable="true"
+            android:title="@string/byProvider"/>
+  </group>
+
+</menu>

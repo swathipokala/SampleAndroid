@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+         android:padding="10dp"
+        android:background="#565656">
+        <ImageView
+            android:id="@+id/statementImage"
+            android:layout_width="90dp"
+            android:layout_height="95dp"
+            android:layout_centerVertical="true"
+            />
+        
+            <LinearLayout
+     android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_toRightOf="@id/statementImage"
+    android:paddingLeft="10dp">
+        
+        <TextView android:id="@+id/name"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textIsSelectable="false"
+            android:focusable="false"/>
+        <TextView android:id="@+id/billDescription"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#8c8c8c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+           />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#383838"
+        android:orientation="vertical" >
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/redLine"
+        android:adjustViewBounds="true"
+        android:src="@drawable/redline"
+        android:cropToPadding="false" />
+        </LinearLayout>
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#383838"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/txtOfferText"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text=" "
+            android:textColor="#ffffff"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="15px"
+            android:maxLines="1"
+            android:ellipsize="end" />
+        </LinearLayout>
+
+</LinearLayout>
+

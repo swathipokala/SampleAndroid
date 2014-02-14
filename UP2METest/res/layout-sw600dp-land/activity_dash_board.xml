@@ -1,0 +1,542 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="7dp"
+            android:orientation="vertical"
+            android:background="@drawable/pagemail_topimg1"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp">
+
+            <ImageView
+                android:id="@+id/mailIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/header_mail2"
+                android:onClick="showMailActivity" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:id="@+id/mailCount"
+                android:background="@drawable/redbubble"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:visibility="invisible"
+                android:gravity="center_horizontal" />
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+                android:layout_height="wrap_content"
+                style="@style/whitecolor"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/up2me_txt"
+                android:text="@string/app_name"
+                android:contentDescription="@string/fontstyle7" />
+
+            <ImageButton
+                android:id="@+id/pageoffer_back_link"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/home_settings"
+                android:onClick="showSettingsActivity"
+                android:scaleType="fitCenter" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@android:color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:background="#343434"
+                    android:id="@+id/horizontalScrollView"
+                    android:fillViewport="false">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:id="@+id/topStatementBar" />
+                </HorizontalScrollView>
+
+
+                <LinearLayout
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:orientation="horizontal"
+                    android:gravity="left">
+
+                    <LinearLayout
+                        android:layout_width="335dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:paddingTop="5dp" >
+
+                        <AbsoluteLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent">
+
+                            <ImageView
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:src="@drawable/header_offers"
+                                android:scaleType="fitStart"
+                                android:background="@android:color/black"
+                                android:layout_gravity="left"
+                                android:onClick="showOfferActivity" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|top"
+                                android:id="@+id/txtOfferCount"
+                                android:textSize="16dp"
+                                android:shadowDx="1.0"
+                                android:shadowDy="1.0"
+                                android:shadowRadius="1"
+                                android:background="@drawable/redbubble"
+                                android:layout_x="22dp"
+                                android:layout_y="2dp"
+                                android:visibility="invisible"
+                                android:textAlignment="center"
+                                android:textIsSelectable="false"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textColor="#ffffff" />
+                        </AbsoluteLayout>
+
+                        <ListView
+                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/offersList"
+                            android:background="#343434"
+                            android:choiceMode="singleChoice"
+                            android:focusable="false"
+                            android:drawSelectorOnTop="true"
+                            android:footerDividersEnabled="false"
+                            android:headerDividersEnabled="false"
+                            android:layout_marginTop="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="335dp"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp" >
+					<AbsoluteLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent">
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:src="@drawable/header_library"
+                            android:scaleType="fitStart"
+                            android:background="@android:color/black"
+                            android:cropToPadding="false"
+                            android:adjustViewBounds="false" 
+                            android:onClick="showLibraryActivity"/>
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|top"
+                                android:id="@+id/txtLibraryCount"
+                                android:textSize="16dp"
+                                android:shadowDx="1.0"
+                                android:shadowDy="1.0"
+                                android:shadowRadius="1"
+                                android:background="@drawable/redbubble"
+                                android:layout_x="22dp"
+                                android:layout_y="2dp"
+                                android:visibility="invisible"
+                                android:textAlignment="center"
+                                android:textIsSelectable="false"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textColor="#ffffff" />
+					</AbsoluteLayout>
+                        <!-- <ListView
+                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:background="#343434"
+                            android:layout_marginTop="5dp"
+                            android:choiceMode="singleChoice" /> -->
+                            
+                            <ScrollView
+						        android:id="@+id/dashboardlibrary"
+						        android:layout_width="match_parent"
+						        android:layout_height="match_parent"
+						        android:background="@color/dashboardRefCOlor"
+                                android:layout_marginTop="5dp">
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top"
+                            android:orientation="vertical"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/catalogsLL"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/catalogsflyerBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="1.13"
+                                    android:background="@color/dashboardRefCOlor"
+                                    android:clickable="true"
+                                    android:gravity="center|left"
+                                    android:paddingLeft="15dp"
+                                    android:text="Catalogs/Flyers"
+                                    android:textColor="#B1B1B1"
+                                    android:textSize="18sp" />
+
+                                <Button
+                                    android:id="@+id/catalogsflyerPlusBtn"
+                                    android:layout_width="35dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_gravity="center|right"
+                                    android:background="@color/dashboardRefCOlor"
+                                    android:text="—"
+                                    android:textColor="#B1B1B1"
+                                    android:textSize="30sp" />
+                            </LinearLayout>
+
+                            
+                                <HorizontalScrollView
+				                    android:layout_width="fill_parent"
+				                    android:layout_height="120dp"
+				                    android:background="#292929"
+				                    android:id="@+id/horizontalScrollViewFlyer"
+				                    >
+									
+                                    <LinearLayout
+				                        android:orientation="horizontal"
+				                        android:layout_height="match_parent"
+				                        android:layout_width="match_parent"
+				                        android:id="@+id/BarFlyer" 
+				                        android:padding="5dp">
+                                    
+				                   </LinearLayout>
+                			</HorizontalScrollView>
+
+                                <LinearLayout
+								android:layout_width="fill_parent"
+								android:layout_height="3dp"
+								android:layout_gravity="bottom"
+								android:orientation="horizontal" 
+								android:background="@color/black">
+							</LinearLayout>
+							
+                            <LinearLayout
+                                android:id="@+id/referenceLL"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:orientation="horizontal"
+                                android:paddingTop="2dp" >
+
+                                <Button
+                                    android:id="@+id/referenceBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="0.86"
+                                    android:background="@color/dashboardRefCOlor"
+                                    android:clickable="true"
+                                    android:gravity="center|left"
+                                    android:paddingLeft="15dp"
+                                    android:text="Reference"
+                                    android:textColor="#B1B1B1"
+                                    android:textSize="18sp" />
+
+                                <Button
+                                    android:id="@+id/referencePlusBtn"
+                                    android:layout_width="35dp"
+                                    android:layout_height="fill_parent"
+                                    android:layout_gravity="center|right"
+                                    android:background="@color/dashboardRefCOlor"
+                                    android:text="+"
+                                    android:textColor="#B1B1B1"
+                                    android:textSize="30sp" />
+                            </LinearLayout>
+
+                            <HorizontalScrollView
+				                    android:layout_width="match_parent"
+				                    android:layout_height="120dp"
+				                    android:background="#292929"
+				                    android:id="@+id/horizontalScrollViewReference"
+				                    android:visibility="invisible"
+				                    >
+									
+                                    <LinearLayout
+				                        android:orientation="horizontal"
+				                        android:layout_height="match_parent"
+				                        android:layout_width="match_parent"
+				                        android:id="@+id/BarReference" 
+				                        android:padding="5dp">
+                                                                       
+				                   </LinearLayout>
+                			</HorizontalScrollView>
+                			
+                			 <LinearLayout
+								android:layout_width="fill_parent"
+								android:layout_height="3dp"
+								android:layout_gravity="bottom"
+								android:orientation="horizontal" 
+								android:background="@color/black">
+							</LinearLayout>
+							
+                        </LinearLayout>
+					</ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="333dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp" >
+
+                        <ImageView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:src="@drawable/header_apps"
+                            android:scaleType="fitStart"
+                            android:background="@android:color/black"
+                            android:adjustViewBounds="false"
+                            android:onClick="showAssistantsActivity" />
+                        <ScrollView
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:background="#343434"
+                            android:layout_marginTop="5dp">
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="5dp"
+                            android:gravity="center_vertical">
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:background="#343434"
+                                android:clickable="true"
+                                android:gravity="center_horizontal"
+                                android:visibility="visible">
+                                <AbsoluteLayout
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/image_container2"
+                                    android:background="#343434">
+
+                                    <ImageButton
+                                        android:layout_width="125dp"
+                                        android:layout_height="125dp"
+                                        android:id="@+id/billButton"
+                                        android:adjustViewBounds="false"
+                                        android:src="@drawable/app_img3"
+                                        android:background="#343434"
+                                        android:scaleType="fitXY"
+                                        android:clickable="true"
+                                        android:onClick="showBills"
+                                        android:baselineAlignBottom="false"
+                                        android:padding="5dp" />
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right|top"
+                                        android:id="@+id/bills_text"
+                                        android:textSize="16sp"
+                                        android:shadowDx="1.0"
+                                        android:shadowDy="1.0"
+                                        android:shadowRadius="1"
+                                        android:background="@drawable/redbubble"
+                                        android:layout_x="98dp"
+                                        android:layout_y="6dp"
+                                        android:visibility="invisible"
+                                        android:textAlignment="center"
+                                        android:gravity="center_vertical|center_horizontal"
+                                        android:textColor="#ffffff" />
+                                </AbsoluteLayout>
+
+ 
+                               <AbsoluteLayout
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/image_container5"
+                                    android:background="#343434">
+
+                                <ImageButton
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/cashFlowButton"
+                                    android:adjustViewBounds="false"
+                                    android:src="@drawable/app_img8"
+                                    android:background="#343434"
+                                    android:scaleType="fitXY"
+                                    android:onClick="showCashFlow"
+                                    android:padding="5dp"
+                                    android:baselineAlignBottom="false" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right|top"
+                                        android:id="@+id/statements_text"
+                                        android:textSize="16sp"
+                                        android:shadowDx="1.0"
+                                        android:shadowDy="1.0"
+                                        android:shadowRadius="1"
+                                        android:background="@drawable/redbubble"
+                                        android:layout_x="98dp"
+                                        android:layout_y="5dp"
+                                        android:visibility="invisible"
+                                        android:textAlignment="center"
+                                        android:gravity="center_vertical|center_horizontal"
+                                        android:textColor="#ffffff" />
+                                </AbsoluteLayout>
+                                
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="center_horizontal">
+
+                                   <ImageButton
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/Button10"
+                                    android:adjustViewBounds="false"
+                                    android:src="@drawable/creditassistantsbtn"
+                                    android:background="#343434"
+                                    android:scaleType="fitCenter"
+                                    android:clickable="true"
+                                    android:onClick="showMyCreditCard"
+                                     />
+                                
+                               <ImageButton
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/Button11"
+                                    android:adjustViewBounds="false"
+                                    android:src="@drawable/app_img9"
+                                    android:background="#343434"
+                                    android:scaleType="fitCenter"
+                                    android:clickable="true"
+                                    android:onClick="showMyPlan"
+                                    android:padding="5dp" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:background="#343434"
+                                android:gravity="center_horizontal">
+                                <ImageButton
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/alertsButton"
+                                    android:adjustViewBounds="false"
+                                    android:src="@drawable/app_img6"
+                                    android:background="#343434"
+                                    android:scaleType="fitStart"
+                                    android:paddingLeft="10dp"
+                                    android:padding="5dp" />
+                                <ImageButton
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/expensesButton"
+                                    android:adjustViewBounds="false"
+                                    android:src="@drawable/app_img4"
+                                    android:background="#343434"
+                                    android:scaleType="fitXY"
+                                    android:padding="5dp" />
+                                
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="center_horizontal">
+
+                                <ImageButton
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/vaultButton"
+                                    android:clickable="true"
+                                    android:src="@drawable/app_img1"
+                                    android:background="#343434"
+                                    android:scaleType="fitStart"
+                                    android:padding="5dp" />
+                                <ImageButton
+                                    android:layout_width="125dp"
+                                    android:layout_height="125dp"
+                                    android:id="@+id/savingButton"
+                                    android:adjustViewBounds="false"
+                                    android:src="@drawable/app_img7"
+                                    android:background="#343434"
+                                    android:scaleType="fitCenter"
+                                    android:padding="5dp" />
+                                
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </LinearLayout>
+
+          </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

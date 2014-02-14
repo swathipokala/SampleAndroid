@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#2A2A2A"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/settings_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#2A2A2A" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@drawable/salogosignup"
+                android:scaleType="fitStart"
+                android:src="@drawable/up2melogo" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="650dp"
+                android:layout_height="750dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@layout/managetagssharplayout"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/settings_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="80dp"
+                    android:background="#ffffff" >
+
+                    <Button
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:onClick="goBack"
+                        android:text="@string/back"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="17sp" />
+
+                    <Button
+                        android:id="@+id/userProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/white"
+                        android:onClick="showUserProfile"
+                        android:text="@string/profile"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:id="@+id/settings_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:paddingTop="30dp" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <EditText
+                                    android:id="@+id/loginEmail"
+                                    android:layout_width="220dp"
+                                    android:layout_height="30dp"
+                                    android:background="@layout/round_corner_edittext"
+                                    android:hint="User ID"
+                                    android:inputType="textEmailAddress"
+                                    android:textSize="15sp" />
+
+                                <EditText
+                                    android:id="@+id/passwordValue"
+                                    android:layout_width="220dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@layout/round_corner_edittext"
+                                    android:hint="Password"
+                                    android:inputType="textPassword"
+                                    android:textSize="15sp" />
+
+                                <EditText
+                                    android:id="@+id/confirmPasswordValue"
+                                    android:layout_width="220dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@layout/round_corner_edittext"
+                                    android:hint="Confirm Password"
+                                    android:inputType="textPassword"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="80dp"
+                                android:layout_marginTop="25dp"
+                                android:orientation="vertical" >
+
+                                <RadioGroup
+                                    android:id="@+id/radioSetTimeOutTo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" >
+
+                                    <com.rrdonnelly.up2me.components.RobotoRadioButton
+                                        android:id="@+id/setTimeOutTo"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_settimeoutto" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoRadioButton
+                                        android:id="@+id/doNotTimeOut"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="150dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_donottimeout" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal" >
+
+                                <EditText
+                                    android:id="@+id/setTimeOutToValue"
+                                    android:layout_width="80dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@layout/round_corner_edittext"
+                                    android:hint="minutes"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:textSize="15sp" />
+
+                                <com.rrdonnelly.up2me.components.RobotoTextView
+                                    android:id="@+id/minutesText"
+                                    style="@style/darkgraycolor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:contentDescription="@string/fontstyle5"
+                                    android:text="@string/settings_minutes" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp" >
+
+                            <TextView
+                                android:id="@+id/loginErroMsg"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="left"
+                                android:textColor="@color/red"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp" >
+
+                            <com.rrdonnelly.up2me.components.RobotoCheckbox
+                                android:id="@+id/chekRequirePassword"
+                                style="@style/darkgraycolor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:contentDescription="@string/fontstyle5"
+                                android:text="@string/settings_requirepasswordtologininUp2Me" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:paddingTop="20dp" >
+
+                            <LinearLayout
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:gravity="left"
+                                android:orientation="vertical" >
+
+                                <com.rrdonnelly.up2me.components.RobotoTextView
+                                    android:id="@+id/showBadges"
+                                    style="@style/darkgraycolor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:contentDescription="@string/fontstyle3"
+                                    android:text="@string/settings_showbadges" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/showBadgesStatementsValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/showBadgesBillsText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_bills" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/showBadgesBillsValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/showBadgesBillsText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_bills" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/showBadgesOffersValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/showBadgesOffersText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_offers" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/showBadgesLibraryValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/showBadgesLibraryText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_library" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:gravity="left"
+                                android:orientation="vertical" >
+
+                                <com.rrdonnelly.up2me.components.RobotoTextView
+                                    android:id="@+id/calendarAlerts"
+                                    style="@style/darkgraycolor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:contentDescription="@string/fontstyle3"
+                                    android:text="@string/settings_calendaralerts" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/calendarAlertsBillsValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/calendarAlertsBillsText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_bills" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/calendarAlertsOffersValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/calendarAlertsOffersText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_offers" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:gravity="left"
+                                android:orientation="vertical" >
+
+                                <com.rrdonnelly.up2me.components.RobotoTextView
+                                    android:id="@+id/cloudSync"
+                                    style="@style/darkgraycolor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:contentDescription="@string/fontstyle3"
+                                    android:text="@string/settings_cloudsync" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/CloudSyncStatementsValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/CloudSyncStatementsText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_statements" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/CloudSyncBillsValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/CloudSyncBillsText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_bills" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/CloudSyncAllValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/CloudSyncAllText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_all" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal" >
+
+                                    <Switch
+                                        android:id="@+id/CloudSyncAppDataValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:textColor="@color/white"
+                                        android:textOff="Off"
+                                        android:textOn="On"
+                                        android:textSize="17dp" />
+
+                                    <com.rrdonnelly.up2me.components.RobotoTextView
+                                        android:id="@+id/CloudSyncAppDataText"
+                                        style="@style/darkgraycolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:contentDescription="@string/fontstyle5"
+                                        android:text="@string/settings_appdata" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/settingsTags"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:clickable="true"
+                                android:onClick="showManageTags"
+                                android:paddingTop="20dp"
+                                android:text="Tags"
+                                android:textColor="#F19A69"
+                                android:textSize="17dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/settingsCloud"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:clickable="true"
+                                android:onClick="showSelectCloudProvider"
+                                android:paddingTop="20dp"
+                                android:text="Cloud"
+                                android:textColor="#F19A69"
+                                android:textSize="17dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/settingsOffers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:clickable="true"
+                                android:onClick="showOfferProviders"
+                                android:paddingTop="20dp"
+                                android:text="Offers"
+                                android:textColor="#F19A69"
+                                android:textSize="17dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/settingsProviders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:clickable="true"
+                                android:onClick="showDocumentProviders"
+                                android:paddingTop="20dp"
+                                android:text="Providers"
+                                android:textColor="#F19A69"
+                                android:textSize="17dp"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:paddingRight="30dp"
+                                android:paddingTop="20dp" >
+
+                                <Button
+                                    android:id="@+id/saveButtonId"
+                                    android:layout_width="80dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/settingsbutton"
+                                    android:onClick="saveSettings" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

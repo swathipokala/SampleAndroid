@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_margin="1dp"
+        android:background="@drawable/assistantsnaviimage"
+        android:padding="2dp" >
+
+        <ImageView
+            android:id="@+id/mailIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:onClick="showHome"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/home_page_link" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:padding="2dp" >
+
+            <ImageView
+                android:id="@+id/mailIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:src="@drawable/assistantstitle" />
+        </LinearLayout>
+
+        <SearchView
+            android:id="@+id/pageoffer_back_link"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:iconifiedByDefault="true"
+            android:scaleType="fitCenter"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@color/black" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/image_container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                    <!-- layout -->
+
+                    <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="showBills"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="300dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/bills_text"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:onClick="showBills"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img3" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Available bills List"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadBills1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:text="Unpaid: "
+                                    android:textColor="#ffffff" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/unReadBills"
+                                    android:layout_toRightOf="@+id/unReadBills1"
+                                    android:paddingTop="15dp"
+                                    android:textColor="@color/red" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- layout end -->
+
+
+                    <!-- layout -->
+
+                    <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="showCashFlow"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="275dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/cashFlowButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:onClick="showCashFlow"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img8" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Available Account list"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadMessages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- layout end -->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/image_container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                     <!-- layout -->
+
+                    <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="showMyCreditCard"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="275dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/unpaidButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:onClick="showMyCreditCard"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/creditassistantsbtn" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Credit details"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadMessages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- layout end -->
+                    
+                  <!-- layout -->
+
+                    <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="showMyPlan"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="300dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/unpaidButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:onClick="showMyPlan"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img9" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="My Plan Details"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadMessages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- layout end -->
+
+                    <!-- layout -->
+
+                    <!-- <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="showStatments"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="275dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/expensesButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:onClick="showStatments"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img8" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Available Account list"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadStatements1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:text="Unread Statements: "
+                                    android:textColor="#ffffff" />
+
+                                <TextView
+                                    android:id="@+id/unReadStatements"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/unReadStatements1"
+                                    android:paddingTop="15dp"
+                                    android:textColor="@color/red" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout> -->
+
+                    <!-- layout end -->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/image_container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="0dp" >
+
+                    <!-- layout -->
+
+                    <!-- <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="showUnpaid"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="300dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/unpaidButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:onClick="showUnpaid"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img2" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Paid/Unpaid details"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unPaid1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:text="Unpaid Bills: "
+                                    android:textColor="#ffffff" />
+
+                                <TextView
+                                    android:id="@+id/unPaid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/unPaid1"
+                                    android:paddingTop="15dp"
+                                    android:textColor="@color/red" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout> -->
+
+                    <!-- layout end -->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/image_container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                    <!-- layout -->
+
+                    <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="300dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/alertsButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img6" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Alerts details"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadMessages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- layout end -->
+
+                    <!-- layout -->
+
+                    <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="275dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/expensesButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img4" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Expenses details"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadMessages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- layout end -->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/image_container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="2dp" >
+
+                    <!-- layout -->
+
+                    <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="300dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/vaultButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img1" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Vault details"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadMessages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- layout end -->
+
+                    <!-- layout -->
+
+                    <LinearLayout
+                        android:layout_width="375dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#565656"
+                            android:orientation="horizontal" >
+
+                            <LinearLayout
+                                android:layout_width="275dp"
+                                android:layout_height="75dp"
+                                android:layout_margin="5dp"
+                                android:background="#565656"
+                                android:orientation="horizontal"
+                                android:padding="10dp" >
+
+                                <ImageButton
+                                    android:id="@+id/savingButton"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:adjustViewBounds="false"
+                                    android:background="#343434"
+                                    android:clickable="true"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/app_img7" />
+
+                                <TextView
+                                    android:id="@+id/up2me_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:paddingLeft="10dp"
+                                    android:text="Savings details"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343402"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#343434"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/unReadMessages"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:paddingStart="20dp"
+                                    android:textColor="#ffffff" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- layout end -->
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

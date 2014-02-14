@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lEntryFee"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_style"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="0dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="New Tag"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:weightSum="100" >
+
+            <EditText
+                android:id="@+id/etTagName"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:inputType="text"
+                android:hint="@string/enter_title"
+                 />
+        </LinearLayout>
+        
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="1dp"
+            android:paddingTop="10dp"
+            android:weightSum="100" >
+
+            
+            <TextView
+                android:id="@+id/tagColor"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                android:text=""/>
+            
+            <!-- <Button
+                android:id="@+id/tag1ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:background="#EE1F25"
+            	android:tag="#EE1F25"/>  -->
+            
+            
+            <TextView
+                android:id="@+id/tag1ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:clickable="true"
+                android:background="#EE1F25"
+                android:tag="#EE1F25" />
+            
+            <TextView
+                android:id="@+id/tag2ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:clickable="true"
+                android:background="#C268A9"
+                android:tag="#C268A9" />
+            
+            <TextView
+                android:id="@+id/tag3ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:clickable="true"
+                android:background="#466DB4" 
+                android:tag="#466DB4"/>
+            
+            <TextView
+                android:id="@+id/tag4ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:clickable="true"
+                android:background="#BBBBBB" 
+                android:tag="#BBBBBB"/>
+            
+            <TextView
+                android:id="@+id/tag5ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:clickable="true"
+                android:background="#F3EC0C" 
+                android:tag="#F3EC0C"/>
+            
+            <TextView
+                android:id="@+id/tag6ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:clickable="true"
+                android:background="#4AB747" 
+                android:tag="#4AB747"/>
+            
+            <TextView
+                android:id="@+id/tag7ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:clickable="true"
+                android:background="#F58021" 
+                android:tag="#F58021"/>
+            
+            <TextView
+				android:id="@+id/tag8ColorBox"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="8dp"
+            	android:layout_marginRight="8dp"
+            	android:clickable="true"
+                android:background="#672A86" 
+                android:tag="#672A86"/>
+            
+        </LinearLayout>
+
+       <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_weight="50"
+                 android:background="@drawable/tagpopup_leftbutton"
+                android:text="Cancel"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_weight="50"
+                android:background="@drawable/tagpopup_rightbutton"
+                android:paddingRight="6dp"
+                android:text="Ok"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp" />
+
+</LinearLayout>

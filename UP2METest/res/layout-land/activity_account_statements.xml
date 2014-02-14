@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="1dp"
+        android:padding="7dp"
+        android:background="@drawable/statement_header">
+        <Button
+            android:id="@+id/homeorBackbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/home_page_link"
+            android:text=""
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:onClick="showDashHome" />
+        <LinearLayout 
+            android:id="@+id/linearLayout1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" android:padding="2dp">
+            <ImageView
+                android:id="@+id/mailIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/header_statements" />
+        </LinearLayout>
+        <ImageView
+           android:id="@+id/serachIcon"
+           android:layout_width="30dp"
+           android:layout_height="25dp"
+           android:layout_centerInParent="true"
+           android:layout_alignParentRight="true"
+           android:src="@drawable/pagemail_searchicon" 
+           android:onClick="showHideSearchView"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"/>
+
+		<SearchView
+            android:id="@+id/searchviewText"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/serachIcon"
+            android:background="@android:color/white"
+            android:paddingRight="3dp"
+            android:scaleType="fitCenter"
+            android:visibility="invisible">
+        </SearchView> 
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/unReadMessages"
+                android:text="Unread"
+                android:textColor="#ffffff"
+                android:paddingStart="20dp"
+                android:textSize="12sp"
+                />
+        
+            
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="right|center_vertical">            
+	            <TextView
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/sortText"
+	        android:text="@string/receivedDate"
+	        android:textColor="#ffffff"
+	        android:onClick="onClick"
+	        android:clickable="true"
+	        android:textSize="12sp"
+	        android:textStyle="bold"
+	       
+	        android:layout_toLeftOf="@+id/sortArrow" />
+	        <ImageView
+	        android:layout_height="15dp"
+	        android:layout_width="wrap_content"
+	        android:id="@+id/sortArrow"
+	        android:src="@drawable/back_arrow"
+			android:scaleType="center"
+	        android:layout_alignParentEnd="true" />
+	     </LinearLayout>
+	        
+        
+        
+        </RelativeLayout>
+    </LinearLayout>
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="200dp"
+        android:gravity="center"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="3dp"
+        android:drawSelectorOnTop="true"
+        android:stretchMode="columnWidth"
+        android:choiceMode="singleChoice"
+        android:textFilterEnabled="false"
+        android:stackFromBottom="false"
+        android:smoothScrollbar="true"
+        android:numColumns="auto_fit">
+    </GridView>
+
+</LinearLayout>

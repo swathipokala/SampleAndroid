@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SyncProcessActivity" 
+    android:layout_gravity="center"
+	android:orientation="vertical" 
+    android:background="#FEFEFE">
+
+<!--     <LinearLayout
+        android:id="@+id/synclogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FEFEFE"
+        android:orientation="horizontal" > -->
+
+       
+        <!-- <RelativeLayout
+            android:id="@+id/syncprocess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical" 
+            android:background="#FEFEFE"> -->
+             <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="fill_parent"
+		        android:layout_centerInParent="true"
+		        android:src="@drawable/sync" />
+
+            <TextView
+                android:id="@+id/sync_status_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="@string/sync_process_status"
+                android:textAppearance="?android:attr/textAppearanceMedium" 
+                android:textAlignment="center"
+                android:paddingRight="400dp"/>
+
+            <ProgressBar
+                 android:id="@+id/progessbarSync"
+                 style="@drawable/ajax_login"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:layout_below="@+id/sync_status_message"
+                 android:paddingRight="385dp"/>
+            
+             <RelativeLayout
+                 android:id="@+id/syncPoweredbylogo"
+                 android:layout_width="match_parent"
+                 android:layout_height="35dp"
+                 android:layout_alignParentBottom="true"
+                 android:layout_alignParentLeft="true" >
+
+                 <TextView
+                     android:id="@+id/textPoweredby"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentBottom="true"
+                     android:layout_toLeftOf="@+id/rrdlogopowered"
+                     android:paddingBottom="6dp"
+                     android:paddingLeft="0dp"
+                     android:text="@string/poweredby"
+                     android:textColor="@color/ashcolor"
+                     android:textSize="18sp" />
+
+                 <ImageView
+                     android:id="@+id/rrdlogopowered"
+                     android:layout_width="120dp"
+                     android:layout_height="30dp"
+                     android:layout_alignParentBottom="true"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginRight="55dp"
+                     android:contentDescription="@drawable/rrdlogo"
+                     android:paddingBottom="3dp"
+                     android:paddingLeft="5dp"
+                     android:src="@drawable/rrdlogo" />
+             </RelativeLayout>
+
+             
+        
+<!--         </RelativeLayout> -->
+
+       
+<!-- 
+    </LinearLayout> -->
+	
+</RelativeLayout>

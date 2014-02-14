@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserTermsConditionsActivity" 
+    android:background="#2A2A2A">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="30dp"
+            android:background="@layout/managetagssharplayout"
+            android:orientation="vertical" >
+
+            
+            
+            <RelativeLayout
+	        android:id="@+id/rllBackbtn"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff"
+	        android:layout_marginTop="80dp"
+	        android:layout_marginLeft="20dp" >
+            <TextView
+		            android:id="@+id/textView1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/back"
+		            android:onClick="onClickBackBtn"
+		            android:clickable="true"
+					style="@style/darkgraycolor" 
+					android:textSize="17sp"/>
+
+            <com.rrdonnelly.up2me.components.RobotoTextView
+		            android:id="@+id/termsandconditions"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentTop="true"
+		            android:layout_centerHorizontal="true"
+		            android:text="@string/termsandconditions"
+		            android:textAlignment="center"
+					style="@style/darkgraycolor" 
+					android:contentDescription="@string/fontstyle3"/>
+		        
+            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_toRightOf="@id/termsandconditions"
+		            android:clickable="true"
+		            android:onClick="onClickSaveBtn"
+		            android:text="@string/save"
+		            android:layout_alignParentTop="true" 
+		            android:layout_marginLeft="185dp"
+					style="@style/darkgraycolor" 
+					android:textSize="17sp"/>
+
+		    </RelativeLayout>
+
+            <ScrollView
+                    android:layout_width="500dp"
+                    android:layout_height="900dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@layout/border">
+		        
+                    <com.rrdonnelly.up2me.components.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/termsandconditionstext"
+						style="@style/darkgraycolor" 
+						android:layout_margin="15dp"
+						android:contentDescription="@string/fontstyle6"/>
+                
+            	<!-- </LinearLayout> -->
+			</ScrollView>
+			
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal"
+	            android:layout_marginRight="80dp"
+	            android:layout_marginTop="20dp">
+                
+ 			<Button
+ 			    android:layout_width="wrap_content"
+ 			    android:layout_height="wrap_content"
+ 			    android:layout_alignParentBottom="true"
+ 			    android:layout_alignParentRight="true"
+ 			    android:background="@drawable/button_bg"
+ 			    android:clickable="true"
+ 			    android:onClick="onClickDoNotAccept"
+ 			    android:text="@string/idonotaccept"
+ 			    android:textAlignment="center"
+ 			    android:textColor="@color/white"
+ 			    android:layout_marginRight="15dp"
+ 			    android:textSize="20sp"
+ 			    android:textStyle="bold" />
+            
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_bg"
+                android:clickable="true"
+                android:onClick="onClickAcceptBtn"
+                android:text="@string/iaccept"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@drawable/salogosignup"
+            android:scaleType="fitStart"
+            android:src="@drawable/up2melogo" />
+</RelativeLayout>

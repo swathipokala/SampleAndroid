@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+     	<item
+            android:id="@+id/openInMenu"
+            android:title="@string/open_in"/>
+        <item
+            android:id="@+id/print"
+            android:title="@string/print"/>
+        <item
+            android:id="@+id/addToDropBoxMenu"
+            android:title="@string/add_to_drop_box"/>
+        <item
+            android:id="@+id/addToGoogleDrive"
+            android:title="@string/add_to_google_drive"/>
+        <item
+            android:id="@+id/addToCalenderMenu"
+            android:title="@string/add_to_calender"/>
+        <item
+            android:id="@+id/deleteBillMenu"
+            android:title="@string/delete"/>
+</menu>

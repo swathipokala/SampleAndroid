@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+       <item
+            android:id="@+id/googleWallet"
+            android:title="@string/googleWallet"/>
+       
+       <item
+            android:id="@+id/payPal"
+            android:icon="@drawable/paypal"
+            android:title="@string/payPal"/>
+       
+        <item
+            android:id="@+id/online"
+            android:icon="@drawable/online"
+            android:title="@string/online"/>
+        
+        <item
+            android:id="@+id/yourBank"
+            android:icon="@drawable/yourbank"
+            android:title="@string/yourBank"/>
+
+</menu>
